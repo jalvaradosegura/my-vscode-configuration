@@ -1,0 +1,81 @@
+// Place your key bindings in this file to override the defaults
+[
+    // Undo - Redo
+    {
+        "key": "cmd+z",
+        "command": "-undo"
+    },
+    {
+        "key": "shift+cmd+z",
+        "command": "-redo"
+    },
+    // Move between current windows
+    {
+        "key": "ctrl+l",
+        "command": "workbench.action.navigateRight",
+    },
+    {
+        "key": "ctrl+h",
+        "command": "workbench.action.navigateLeft",
+    },
+    {
+        "key": "ctrl+j",
+        "command": "workbench.action.navigateDown",
+    },
+    {
+        "key": "ctrl+k",
+        "command": "workbench.action.navigateUp",
+    },
+    // Open/Close Terminal
+    {
+        "key": "cmd+2",
+        "command": "runCommands",
+        "args": {
+            "commands": [
+                "workbench.action.togglePanel",
+                "workbench.action.terminal.focus",
+            ]
+        },
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "cmd+2",
+        "command": "workbench.action.togglePanel",
+        "when": "!editorTextFocus"
+    },
+    // Rename folders/files inside the file explorer
+    {
+        "key": "m m",
+        "command": "renameFile",
+        "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+    },
+    {
+        "key": "enter",
+        "command": "-renameFile",
+        "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+    },
+    // Add new file or folder (if you use / in the name) in the file explorer
+    {
+        "key": "m a",
+        "command": "explorer.newFile",
+        "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+    },
+    // Open file from the file explorer and then close the file explorer
+    {
+        "key": "enter",
+        "command": "runCommands",
+        "args": {
+            "commands": [
+                "list.select",
+                "workbench.action.toggleSidebarVisibility"
+                
+            ]
+        },
+        "when": "listFocus && !inputFocus"
+    },
+    {
+        "key": "cmd+down",
+        "command": "-list.select",
+        "when": "listFocus && !inputFocus"
+    },
+]

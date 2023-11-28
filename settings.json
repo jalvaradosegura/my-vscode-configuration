@@ -1,0 +1,67 @@
+{
+    "[jsonc]": {
+      "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "window.zoomLevel": 2,
+    "editor.lineNumbers": "relative",
+    "editor.scrollbar.verticalScrollbarSize": 4,
+    "editor.minimap.enabled": false,
+    "workbench.colorCustomizations": {
+      "statusBar.background": "#005f87",
+      "statusBar.noFolderBackground": "#005f87",
+      "statusBar.debuggingBackground": "#005f87",
+      "statusBar.foreground": "#ffffff",
+      "statusBar.debuggingForeground": "#ffffff"
+    },
+    "vim.leader": " ",
+    "vim.easymotion": true,
+    "vim.statusBarColors.easymotioninputmode": [
+      "#5f00af",
+      "#ffffff"
+    ],
+    "vim.statusBarColorControl": true,
+    "vim.vimrc.path": "$HOME/.vimrc",
+    "vim.vimrc.enable": true,
+    "vim.useSystemClipboard": true,
+    "vim.normalModeKeyBindingsNonRecursive": [
+        // Undo and Redo
+        {
+          "before": ["u"],
+          "commands": [ "undo" ]
+        },
+        {
+          "before": ["<C-r>"],
+          "commands": [ "redo" ]
+        },
+        // Move around tabs
+        {
+          "before": ["S-l"],
+          "commands": [ "workbench.action.nextEditorInGroup" ]
+        },
+        {
+          "before": ["S-h"],
+          "commands": [ "workbench.action.previousEditorInGroup" ]
+        },
+        // Go to definition
+        {
+          "before": ["<Leader>", "g"],
+          "commands": [ "editor.action.revealDefinition" ],
+          "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
+        },
+        // Open search files
+        {
+          "before": ["<Leader>", "f"],
+          "commands": [ "workbench.action.findInFiles" ],
+        },
+      ],
+      // These three requires prettier extension
+      "[typescriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+      },
+      "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+      },
+      "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+      },
+}
