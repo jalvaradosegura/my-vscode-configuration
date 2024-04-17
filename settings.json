@@ -2,10 +2,10 @@
     "[jsonc]": {
       "editor.defaultFormatter": "vscode.json-language-features"
     },
-    "window.zoomLevel": 2,
     "editor.lineNumbers": "relative",
-    "editor.scrollbar.verticalScrollbarSize": 4,
-    "editor.minimap.enabled": false,
+    "editor.scrollbar.verticalScrollbarSize": 2,
+    "editor.minimap.enabled": true,
+    "editor.minimap.showSlider": "always",
     "workbench.colorCustomizations": {
       "statusBar.background": "#005f87",
       "statusBar.noFolderBackground": "#005f87",
@@ -53,15 +53,62 @@
           "before": ["<Leader>", "f"],
           "commands": [ "workbench.action.findInFiles" ],
         },
+        // TESTING: move between windows
+        {
+          "before": ["`"],
+          "commands": ["workbench.action.quickSwitchWindow"],
+        },
+        // Rename code
+        {
+          "before": ["<Leader>", "r"],
+          "commands": ["editor.action.rename"],
+          "when": "editorHasRenameProvider && editorTextFocus && !editorReadonly"
+        },
+        // Comment a line
+        {
+          "before": ["<Leader>", "c"],
+          "commands": ["editor.action.commentLine"],
+          "when": "editorTextFocus && !editorReadonly"
+        },
+        // Display vscode errors / warnings
+        {
+          "before": ["<Leader>", "i"],
+          "commands": ["editor.action.showHover"],
+          "when": "editorTextFocus"
+        },
       ],
-      // These three requires prettier extension
+      // These require prettier extension
       "[typescriptreact]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": true
       },
       "[typescript]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": true
       },
       "[javascript]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": true
       },
+      "[python]": {
+        "editor.defaultFormatter": "ms-python.black-formatter",
+        "editor.formatOnSave": true
+      },
+      // Icons
+      "workbench.iconTheme": "vscode-icons",
+      // How big or small the text will display
+      "window.zoomLevel": 2,
+      // Python specific
+      "python.analysis.typeCheckingMode": "strict",
+      // No sticky scroll
+      "editor.stickyScroll.enabled": false,
+      "files.exclude": {
+        "**/__pycache__": true
+      },
+      "cSpell.userWords": [
+        "autouse",
+        "fastapi",
+        "httpx",
+        "pydantic"
+      ]
 }

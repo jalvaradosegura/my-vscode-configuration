@@ -1,3 +1,4 @@
+
 // Place your key bindings in this file to override the defaults
 [
     // Undo - Redo
@@ -72,7 +73,6 @@
             "commands": [
                 "list.select",
                 "workbench.action.toggleSidebarVisibility"
-                
             ]
         },
         "when": "listFocus && !inputFocus"
@@ -81,5 +81,32 @@
         "key": "cmd+down",
         "command": "-list.select",
         "when": "listFocus && !inputFocus"
+    },
+    {
+        "key": "f2",
+        "command": "-editor.action.rename",
+        "when": "editorHasRenameProvider && editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "shift+cmd+7",
+        "command": "-editor.action.commentLine",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    // Mimic NerdTree behavior to reveal files in explorer
+    {
+        "key": "m r",
+        "command": "revealFileInOS",
+        "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+    },
+    {
+        "key": "alt+cmd+r",
+        "command": "-revealFileInOS",
+        "when": "!editorFocus"
+    },
+    // Display vscode errors / warnings
+    {
+        "key": "cmd+k cmd+i",
+        "command": "-editor.action.showHover",
+        "when": "editorTextFocus"
     },
 ]
