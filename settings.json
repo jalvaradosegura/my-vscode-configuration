@@ -7,9 +7,9 @@
     "editor.minimap.enabled": true,
     "editor.minimap.showSlider": "always",
     "workbench.colorCustomizations": {
-      "statusBar.background": "#005f87",
-      "statusBar.noFolderBackground": "#005f87",
-      "statusBar.debuggingBackground": "#005f87",
+      "statusBar.background": "#005f5f",
+      "statusBar.noFolderBackground": "#005f5f",
+      "statusBar.debuggingBackground": "#005f5f",
       "statusBar.foreground": "#ffffff",
       "statusBar.debuggingForeground": "#ffffff"
     },
@@ -52,11 +52,6 @@
         {
           "before": ["<Leader>", "f"],
           "commands": [ "workbench.action.findInFiles" ],
-        },
-        // TESTING: move between windows
-        {
-          "before": ["`"],
-          "commands": ["workbench.action.quickSwitchWindow"],
         },
         // Rename code
         {
@@ -110,5 +105,6 @@
         "fastapi",
         "httpx",
         "pydantic"
-      ]
+      ],
+      "prisma.showPrismaDataPlatformNotification": false
 }
