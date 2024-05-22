@@ -1,0 +1,98 @@
+{
+  "keyMappings": "map H previousTab\nmap L nextTab\nmap <c-h> goBack\nmap <c-l> goForward\nmap g. visitPreviousTab\nmap ' Marks.activateGotoMode",
+  "settingsVersion": "2.1.2",
+  "exclusionRules": [
+    {
+      "passKeys": "",
+      "pattern": "https?://mail.google.com/*"
+    },
+    {
+      "passKeys": "",
+      "pattern": "https?://console.cloud.google.com/*"
+    },
+    {
+      "passKeys": "",
+      "pattern": "https?://ssh.cloud.google.com/*"
+    },
+    {
+      "passKeys": "",
+      "pattern": "https?://vimsnake.com/*"
+    },
+    {
+      "passKeys": "",
+      "pattern": "https?://www.vimgenius.com/*"
+    },
+    {
+      "passKeys": "",
+      "pattern": "https?://diep.io/*"
+    },
+    {
+      "passKeys": "",
+      "pattern": "https?://10fastfingers.com/*"
+    },
+    {
+      "passKeys": "",
+      "pattern": "https?://developers.facebook.com/*"
+    },
+    {
+      "passKeys": "",
+      "pattern": "https?://localhost:8888/*"
+    },
+    {
+      "passKeys": "*",
+      "pattern": "https?://www.algoexpert.io/*"
+    },
+    {
+      "passKeys": "",
+      "pattern": "https?://www.algoexpert.io/*"
+    },
+    {
+      "passKeys": "",
+      "pattern": "https?://www.codewars.com/*"
+    },
+    {
+      "passKeys": "",
+      "pattern": "https?://kahoot.it/*"
+    },
+    {
+      "passKeys": "",
+      "pattern": "https?://cloud.digitalocean.com/*"
+    },
+    {
+      "passKeys": "",
+      "pattern": "https?://cloud.digitalocean.com/*"
+    },
+    {
+      "passKeys": "",
+      "pattern": "https?://keyboardyoga.space/*"
+    },
+    {
+      "passKeys": "",
+      "pattern": "https?://configure.zsa.io/*"
+    },
+    {
+      "passKeys": "",
+      "pattern": "https?://stackblitz.com/*"
+    },
+    {
+      "passKeys": "",
+      "pattern": "https?://assessment.testgorilla.com/*"
+    },
+    {
+      "passKeys": "",
+      "pattern": "https?://powerline.io/*"
+    },
+    {
+      "passKeys": "",
+      "pattern": "https://vim-adventures.com/"
+    },
+    {
+      "passKeys": "",
+      "pattern": "https?://leetcode.com/*"
+    },
+    {
+      "passKeys": "",
+      "pattern": "https?://monkeytype.com/*"
+    }
+  ]
+}
