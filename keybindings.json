@@ -124,4 +124,22 @@
             ]
         },
     },
+    // Open file explorer
+    {
+        "key": "cmd+3",
+        "command": "workbench.view.explorer",
+        "when": "viewContainer.workbench.view.explorer.enabled"
+    },
+    // Close file explorer
+    {
+        "key": "cmd+3",
+        "command": "workbench.action.toggleSidebarVisibility",
+        "when": "filesExplorerFocus"
+    },
+    // Remove default keybinding
+    {
+        "key": "shift+cmd+e",
+        "command": "-workbench.view.explorer",
+        "when": "viewContainer.workbench.view.explorer.enabled"
+    },
 ]
