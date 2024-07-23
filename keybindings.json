@@ -142,4 +142,40 @@
         "command": "-workbench.view.explorer",
         "when": "viewContainer.workbench.view.explorer.enabled"
     },
+    // Move in terminals (down)
+    {
+        "key": "f4",
+        "command": "workbench.action.terminal.focusNext",
+        "when": "terminalFocus && terminalHasBeenCreated && !terminalEditorFocus || terminalFocus && terminalProcessSupported && !terminalEditorFocus"
+    },
+    // Remove default keybinding
+    {
+        "key": "ctrl+alt+cmd+[Backslash]",
+        "command": "-workbench.action.terminal.focusNext",
+        "when": "terminalFocus && terminalHasBeenCreated && !terminalEditorFocus || terminalFocus && terminalProcessSupported && !terminalEditorFocus"
+    },
+    // Move in terminals (up)
+    {
+        "key": "f3",
+        "command": "workbench.action.terminal.focusPrevious",
+        "when": "terminalFocus && terminalHasBeenCreated && !terminalEditorFocus || terminalFocus && terminalProcessSupported && !terminalEditorFocus"
+    },
+    // Remove default keybinding
+    {
+        "key": "ctrl+alt+cmd+[Quote]",
+        "command": "-workbench.action.terminal.focusPrevious",
+        "when": "terminalFocus && terminalHasBeenCreated && !terminalEditorFocus || terminalFocus && terminalProcessSupported && !terminalEditorFocus"
+    },
+    // Move in search results (up, to move down use default: f4)
+    {
+        "key": "f3",
+        "command": "search.action.focusPreviousSearchResult",
+        "when": "!terminalFocus && hasSearchResult || inSearchEditor"
+    },
+    // Remove default keybinding
+    {
+        "key": "shift+f4",
+        "command": "-search.action.focusPreviousSearchResult",
+        "when": "hasSearchResult || inSearchEditor"
+    },
 ]
