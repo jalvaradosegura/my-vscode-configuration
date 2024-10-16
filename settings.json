@@ -1,110 +1,170 @@
 {
-    "[jsonc]": {
-      "editor.defaultFormatter": "vscode.json-language-features"
-    },
-    "editor.lineNumbers": "relative",
-    "editor.scrollbar.verticalScrollbarSize": 2,
-    "editor.minimap.enabled": true,
-    "editor.minimap.showSlider": "always",
-    "workbench.colorCustomizations": {
-      "statusBar.background": "#005f5f",
-      "statusBar.noFolderBackground": "#005f5f",
-      "statusBar.debuggingBackground": "#005f5f",
-      "statusBar.foreground": "#ffffff",
-      "statusBar.debuggingForeground": "#ffffff"
-    },
-    "vim.leader": " ",
-    "vim.easymotion": true,
-    "vim.statusBarColors.easymotioninputmode": [
-      "#5f00af",
-      "#ffffff"
-    ],
-    "vim.statusBarColorControl": true,
-    "vim.vimrc.path": "$HOME/.vimrc",
-    "vim.vimrc.enable": true,
-    "vim.useSystemClipboard": true,
-    "vim.normalModeKeyBindingsNonRecursive": [
-        // Undo and Redo
-        {
-          "before": ["u"],
-          "commands": [ "undo" ]
-        },
-        {
-          "before": ["<C-r>"],
-          "commands": [ "redo" ]
-        },
-        // Move around tabs
-        {
-          "before": ["S-l"],
-          "commands": [ "workbench.action.nextEditorInGroup" ]
-        },
-        {
-          "before": ["S-h"],
-          "commands": [ "workbench.action.previousEditorInGroup" ]
-        },
-        // Go to definition
-        {
-          "before": ["<Leader>", "g"],
-          "commands": [ "editor.action.revealDefinition" ],
-          "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
-        },
-        // Open search files
-        {
-          "before": ["<Leader>", "f"],
-          "commands": [ "workbench.action.findInFiles" ],
-        },
-        // Rename code
-        {
-          "before": ["<Leader>", "r"],
-          "commands": ["editor.action.rename"],
-          "when": "editorHasRenameProvider && editorTextFocus && !editorReadonly"
-        },
-        // Comment a line
-        {
-          "before": ["<Leader>", "c"],
-          "commands": ["editor.action.commentLine"],
-          "when": "editorTextFocus && !editorReadonly"
-        },
-        // Display vscode errors / warnings
-        {
-          "before": ["<Leader>", "i"],
-          "commands": ["editor.action.showHover"],
-          "when": "editorTextFocus"
-        },
+  "[jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "editor.lineNumbers": "relative",
+  "editor.scrollbar.verticalScrollbarSize": 2,
+  "editor.minimap.enabled": true,
+  "editor.minimap.showSlider": "always",
+  "workbench.colorCustomizations": {
+    "statusBar.background": "#005f87",
+    "statusBar.noFolderBackground": "#005f87",
+    "statusBar.debuggingBackground": "#005f87",
+    "statusBar.foreground": "#ffffff",
+    "statusBar.debuggingForeground": "#ffffff"
+  },
+  "vim.leader": " ",
+  "vim.highlightedyank.enable": true,
+  "editor.cursorSmoothCaretAnimation": "on",
+  "vim.easymotion": true,
+  "vim.statusBarColors.easymotioninputmode": [
+    "#5f00af",
+    "#ffffff"
+  ],
+  "vim.statusBarColorControl": true,
+  "vim.vimrc.path": "$HOME/.vimrc",
+  "vim.vimrc.enable": true,
+  "vim.useSystemClipboard": true,
+  "vim.normalModeKeyBindingsNonRecursive": [
+    // Undo and Redo
+    {
+      "before": [
+        "u"
       ],
-      // These require prettier extension
-      "[typescriptreact]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode",
-        "editor.formatOnSave": true
-      },
-      "[typescript]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode",
-        "editor.formatOnSave": true
-      },
-      "[javascript]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode",
-        "editor.formatOnSave": true
-      },
-      "[python]": {
-        "editor.defaultFormatter": "ms-python.black-formatter",
-        "editor.formatOnSave": true
-      },
-      // Icons
-      "workbench.iconTheme": "vscode-icons",
-      // How big or small the text will display
-      "window.zoomLevel": 2,
-      // Python specific
-      "python.analysis.typeCheckingMode": "strict",
-      // No sticky scroll
-      "editor.stickyScroll.enabled": false,
-      "files.exclude": {
-        "**/__pycache__": true
-      },
-      "cSpell.userWords": [
-        "autouse",
-        "fastapi",
-        "httpx",
-        "pydantic"
+      "commands": [
+        "undo"
+      ]
+    },
+    {
+      "before": [
+        "<C-r>"
       ],
-      "prisma.showPrismaDataPlatformNotification": false
+      "commands": [
+        "redo"
+      ]
+    },
+    // Move around tabs
+    {
+      "before": [
+        "S-l"
+      ],
+      "commands": [
+        "workbench.action.nextEditorInGroup"
+      ]
+    },
+    {
+      "before": [
+        "S-h"
+      ],
+      "commands": [
+        "workbench.action.previousEditorInGroup"
+      ]
+    },
+    // Go to definition
+    {
+      "before": [
+        "<Leader>",
+        "g"
+      ],
+      "commands": [
+        "editor.action.revealDefinition"
+      ],
+      "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
+    },
+    // Open search files
+    {
+      "before": [
+        "<Leader>",
+        "f"
+      ],
+      "commands": [
+        "workbench.action.findInFiles"
+      ],
+    },
+    // Rename code
+    {
+      "before": [
+        "<Leader>",
+        "r"
+      ],
+      "commands": [
+        "editor.action.rename"
+      ],
+      "when": "editorHasRenameProvider && editorTextFocus && !editorReadonly"
+    },
+    // Comment a line
+    {
+      "before": [
+        "<Leader>",
+        "c"
+      ],
+      "commands": [
+        "editor.action.commentLine"
+      ],
+      "when": "editorTextFocus && !editorReadonly"
+    },
+    // Close all tabs but current
+    {
+      "before": [
+        "<Leader>",
+        "b",
+        "o",
+      ],
+      "commands": [
+        "workbench.action.closeOtherEditors"
+      ],
+      "when": "editorTextFocus && !editorReadonly"
+    },
+    // Display vscode errors / warnings
+    {
+      "before": [
+        "<Leader>",
+        "i"
+      ],
+      "commands": [
+        "editor.action.showHover"
+      ],
+      "when": "editorTextFocus"
+    },
+  ],
+  // These require prettier extension
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.black-formatter",
+    "editor.formatOnSave": true
+  },
+  // Icons
+  "workbench.iconTheme": "vscode-icons",
+  // How big or small the text will display
+  "window.zoomLevel": 2,
+  // Python specific
+  "python.analysis.typeCheckingMode": "strict",
+  // No sticky scroll
+  "editor.stickyScroll.enabled": false,
+  "files.exclude": {
+    "**/__pycache__": true
+  },
+  "cSpell.userWords": [
+    "autouse",
+    "fastapi",
+    "httpx",
+    "pydantic",
+    "toku"
+  ],
+  "prisma.showPrismaDataPlatformNotification": false,
+  "security.workspace.trust.untrustedFiles": "open",
+  "D2.previewLayout": "dagre",
+  "workbench.editor.enablePreview": false,
+  "workbench.editor.enablePreviewFromQuickOpen": false
 }
